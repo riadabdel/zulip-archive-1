@@ -11,7 +11,7 @@ inputs:
   zulip_bot_key:
     description: 'API key of the Zulip bot'
     required: true
-  github_personal_access_token:
+  personal_access_token:
     description: 'GitHub personal access token'
     required: true
 runs:
