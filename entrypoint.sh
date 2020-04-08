@@ -81,7 +81,7 @@ git config --global user.name "Archive Bot"
 git add -A
 git commit -m "Update archive."
 
-git remote set-url --push origin https://${GITHUB_ACTOR}:${github_personal_access_token}@github.com/${GITHUB_REPOSITORY}
+git remote set-url --push origin https://${GITHUB_ACTOR}:${personal_access_token}@github.com/${GITHUB_REPOSITORY}
 
 git push origin master --force
 
