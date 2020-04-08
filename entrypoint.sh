@@ -4,7 +4,7 @@ set -e
 zulip_organization_url=$1
 zulip_bot_email=$2
 zulip_bot_api_key=$3
-github_personal_access_token=$4
+personal_access_token=$4
 
 checked_out_repo_path="$(pwd)"
 html_dir_path=$checked_out_repo_path
@@ -30,7 +30,7 @@ pip3 install zulip==0.6.3
 pip3 install pyyaml==5.2
 
 # GitHub pages API is in Preview mode. This might break in future.
-auth_header="Authorization: Bearer ${github_personal_access_token}"
+auth_header="Authorization: Bearer ${personal_access_token}"
 accept_header="Accept: application/vnd.github.switcheroo-preview+json"
 page_api_url="https://api.github.com/repos/${GITHUB_REPOSITORY}/pages"
 # Enable GitHub pages
